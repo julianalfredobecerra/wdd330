@@ -5,7 +5,7 @@ function renderCartContents() {
 
   const listEl = document.querySelector(".product-list");
   const footerEl = document.querySelector(".cart-footer");
-  const totalEl  = footerEl.querySelector(".cart-total");
+  const totalEl = footerEl.querySelector(".cart-total");
 
   if (cartItems.length === 0) {
     listEl.innerHTML = `<li class="cart-empty">Your cart is empty.</li>`;
@@ -13,7 +13,7 @@ function renderCartContents() {
     return;
   }
 
-  const htmlItems = cartItems.map(item => cartItemTemplate(item));
+  const htmlItems = cartItems.map((item) => cartItemTemplate(item));
   listEl.innerHTML = htmlItems.join("");
 
   const total = cartItems
